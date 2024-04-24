@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class I_Cross_Browser_Launch_If_else {
 	public static void main(String[] args) {
 
@@ -17,10 +19,12 @@ public class I_Cross_Browser_Launch_If_else {
 			driver.manage().window().maximize();
 			driver.close();
 		} else if (str.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "D:\\Lib\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			WebDriver driver = new FirefoxDriver();
-			driver.get("https://www.stage-uhcretiree.uhc.com/");
+			driver.get("https://www.google.com");
 			driver.manage().window().maximize();
+			String str1 = driver.getTitle();
+			System.out.println(str1);
 			driver.close();
 
 		}

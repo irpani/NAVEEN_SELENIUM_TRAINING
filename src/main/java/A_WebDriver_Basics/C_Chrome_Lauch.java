@@ -1,25 +1,31 @@
 package A_WebDriver_Basics;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
 
 public class C_Chrome_Lauch {
+	public WebDriver driver;
 
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "E:\\lib\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.stage-uhcretiree.uhc.com/");
+	@BeforeTest
+	public void Beforelaunch() {
+		WebDriverManager.firefoxdriver().setup();
+
+	}
+
+	@Test
+	public void Stringlaunch() {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.google.com/");
 		String str = driver.getTitle();
+		System.out.println(str);
 		System.out.println(driver.getCurrentUrl());
-		System.out.println(driver.getWindowHandle());
-		// System.out.println(driver.getPageSource());
-		System.out.println(driver.getClass());
 
-		if (str.equalsIgnoreCase("UnitedHealthcare  Retiree - Home")) {
-			System.out.println("Tilte Exactly Matched");
-		} else {
-			System.out.println("Tilte Not Matched");
-		}
-
+		// System.out.println(driver.getClass());
+		Assert.assertEquals(str, "Google");
 	}
 }

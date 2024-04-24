@@ -23,7 +23,7 @@ public class Frames_Handling {
 		System.setProperty("webdriver.chrome.driver", "E:\\library\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.londonfreelance.org/courses/frames/index.html");
-		// Frame - id
+		// Frame - index
 		driver.switchTo().frame(0);
 		// Frame -name
 		driver.switchTo().frame("main");

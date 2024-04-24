@@ -3,7 +3,9 @@ package E_Locators_Part_1_FindElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class A_All_Locator_Basics {
 
@@ -12,8 +14,8 @@ public class A_All_Locator_Basics {
 		// System.setProperty("webdriver.gecko.driver", "D:\\Lib\\geckodriver.exe");
 		// WebDriver driver = new FirefoxDriver();
 
-		System.setProperty("webdriver.chrome.driver", "E:\\library\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver();
 		driver.get("https://app.hubspot.com");
 		Thread.sleep(6000);
 		System.out.println(driver.getTitle());
@@ -33,7 +35,7 @@ public class A_All_Locator_Basics {
 
 		// ID
 		// Case:(2) Best Approch
-		// Crete webElemnet Seperately then ->when ever I reuired webElements
+		// Create webElemnet Seperately then ->when ever I reuired webElements
 		// I will use it & Perform Actions
 
 		// Seperated webElemnets

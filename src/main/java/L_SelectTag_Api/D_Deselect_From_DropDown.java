@@ -10,7 +10,7 @@ public class D_Deselect_From_DropDown {
 		// _____Mehods______
 		// DeSelectByIndex();
 		// DeSelectByvisibleText();
-		// DeSelectByValue DeSelectByAll();
+		// DeSelectByValue
 		// DeSelectByAll();
 
 	}

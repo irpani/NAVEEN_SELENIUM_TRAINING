@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13938" started-at="2024-04-19T10:15:30Z" finished-at="2024-04-19T10:15:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13938" started-at="2024-04-19T10:15:30Z" finished-at="2024-04-19T10:15:44Z">
+      <class name="A_WebDriver_Basics.C_Chrome_Lauch">
+        <test-method status="PASS" signature="Beforelaunch()[pri:0, instance:A_WebDriver_Basics.C_Chrome_Lauch@ae45eb6]" name="Beforelaunch" is-config="true" duration-ms="2948" started-at="2024-04-19T10:15:30Z" finished-at="2024-04-19T10:15:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforelaunch -->
+        <test-method status="PASS" signature="Stringlaunch()[pri:0, instance:A_WebDriver_Basics.C_Chrome_Lauch@ae45eb6]" name="Stringlaunch" duration-ms="10950" started-at="2024-04-19T10:15:33Z" finished-at="2024-04-19T10:15:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Stringlaunch -->
+      </class> <!-- A_WebDriver_Basics.C_Chrome_Lauch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

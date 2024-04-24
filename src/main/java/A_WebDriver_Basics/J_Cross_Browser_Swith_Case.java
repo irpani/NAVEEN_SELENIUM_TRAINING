@@ -5,12 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class J_Cross_Browser_Swith_Case {
 	// WebDriver driver;
 
 	public static void main(String[] args) {
 
-		String str = "ie";
+		String str = "firefox";
 
 		switch (str) {
 		case "chrome":
@@ -21,10 +23,11 @@ public class J_Cross_Browser_Swith_Case {
 			driver.close();
 			break;
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver", "D:\\Lib\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			WebDriver driver1 = new FirefoxDriver();
-			driver1.get("https://www.stage-uhcretiree.uhc.com/");
+			driver1.get("https://www.google.com/");
 			driver1.manage().window().maximize();
+			System.out.println(driver1.getTitle());
 			driver1.close();
 			break;
 		case "ie":

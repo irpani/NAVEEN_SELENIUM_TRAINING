@@ -20,4 +20,21 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/java/H_Locators_part4_Xpath_ADVANCED/Axes RelationShip Table.png</name>
+			<type>1</type>
+			<location>C:/Users/Hi/Desktop/Naveen Selenium/Axes RelationShip Table.png</location>
+		</link>
+		<link>
+			<name>src/main/java/H_Locators_part4_Xpath_ADVANCED/Axes Xpath family.png</name>
+			<type>1</type>
+			<location>C:/Users/Hi/Desktop/Naveen Selenium/Axes Xpath family.png</location>
+		</link>
+		<link>
+			<name>src/main/java/L_SelectTag_Api/Select By Index Value Visible Text in 1 Diagram.png</name>
+			<type>1</type>
+			<location>C:/Users/Hi/Desktop/Naveen Selenium/Select By Index Value Visible Text in 1 Diagram.png</location>
+		</link>
+	</linkedResources>
 </projectDescription>

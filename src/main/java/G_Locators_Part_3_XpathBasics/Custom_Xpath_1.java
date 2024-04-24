@@ -1,15 +1,18 @@
+
 package G_Locators_Part_3_XpathBasics;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Custom_Xpath_1 {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "E:\\library\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.stage-uhcretiree.uhc.com/");
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.google.com");
 
 		// _____________(1). Absolute Xpath [Address]________________
 		// //html/body/div[1]/div[5]/div[2]/li/a

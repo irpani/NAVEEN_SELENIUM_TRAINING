@@ -4,10 +4,13 @@ import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class D_Firefox_Launch {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.gecko.driver", "D:\\Lib\\geckodriver.exe");
+		// System.setProperty("webdriver.gecko.driver", "D:\\Lib\\geckodriver.exe");
+		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.stage-uhcretiree.uhc.com/");
 		String str = driver.getTitle();
@@ -15,7 +18,7 @@ public class D_Firefox_Launch {
 		System.out.println(driver.getWindowHandle());
 		// System.out.println(driver.getPageSource());
 		System.out.println(driver.getClass());
-         
+
 		if (str.equalsIgnoreCase("UnitedHealthcare  Retiree - Home")) {
 			System.out.println("Tilte Exactly Matched");
 		} else {
